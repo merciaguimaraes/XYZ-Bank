@@ -1,114 +1,31 @@
 # XYZ-Bank
 Utilizando a ferramenta cypress para automatizar
 
-Levantamento de Requisitos
-Objetivo: Levantar todos os requisitos necessários para garantir que o sistema funcione corretamente, com base nos resultados dos testes realizados no código fornecido.
+### **Levantamento de Requisitos
 
-1.Elaborar a construção de atividades listando todos os requisitos necessários, considerando o resultado obtido dos testes.
-Com base no seu código, vemos que a aplicação precisa realizar algumas interações com a interface do usuário, como clicar em botões, preencher campos de formulário, selecionar opções de listas suspensas, entre outras atividades. Com isso, identificamos requisitos funcionais e não funcionais que devem ser atendidos.
+O objetivo do levantamento de requisitos é identificar as necessidades essenciais para o funcionamento correto do sistema, com base nos testes realizados no código. As principais atividades envolvem a interação com a interface do usuário, como login, cadastro de clientes, e abertura de contas. Foram identificados requisitos funcionais e não funcionais que o sistema deve atender.
 
-Requisitos Funcionais Identificados:
+### **Requisitos Funcionais:**
+1. **Login do Cliente**: Permitir que o cliente faça login selecionando um usuário e autentique-se na aplicação.
+2. **Cadastro de Clientes**: O gerente deve poder adicionar clientes, fornecendo dados como nome, e-mail e telefone.
+3. **Abrir Conta**: O gerente deve ser capaz de abrir uma conta para o cliente, escolhendo a moeda (como o "Dólar").
+4. **Verificação de Página**: Após o login, o usuário deve permanecer na mesma página, sem redirecionamento inesperado.
 
-Login do Cliente: O sistema deve permitir que um cliente faça login utilizando um botão de "Customer Login" e, após isso, seja possível selecionar um usuário e efetuar o login na aplicação.
+### **Requisitos Não Funcionais:**
+1. **Usabilidade**: O sistema deve ser fácil de usar, com elementos da interface do usuário claros e interativos.
+2. **Desempenho**: O sistema deve ser rápido e responsivo, realizando as operações de login, cadastro e abertura de contas de forma eficiente.
+3. **Segurança**: O sistema deve validar corretamente os dados antes de enviá-los ao servidor, evitando falhas.
 
-Cadastro de Clientes: O sistema deve permitir que um gerente adicione um novo cliente, preenchendo dados como nome, e-mail e telefone.
+### **Atividades Identificadas:**
+- Verificar a visibilidade e funcionalidade do botão de login.
+- Validar o formulário de cadastro de clientes.
+- Implementar a funcionalidade de abertura de conta e garantir a visibilidade das opções de moeda.
+- Assegurar o comportamento correto de redirecionamento após as ações realizadas.
 
-Abrir Conta: O sistema deve permitir que um gerente abra uma nova conta para um cliente, selecionando a moeda desejada (por exemplo, "Dollar").
+### **Histórias de Usuário para Melhorias no Sistema:**
+1. **Login do Cliente**: Como cliente, desejo realizar o login de forma rápida e segura, com autenticação por senha ou biometria, para acessar minha conta sem dificuldades.
+2. **Cadastro de Cliente**: Como gerente, desejo adicionar clientes facilmente com um formulário simples para garantir eficiência e reduzir erros.
+3. **Abertura de Conta**: Como gerente, quero abrir contas para clientes de forma ágil, com a possibilidade de selecionar a moeda "Dollar" corretamente.
 
-Verificação de Página: O sistema deve garantir que o usuário permaneça na mesma página após realizar a ação de login, de modo a garantir que não haja redirecionamento inesperado.
-
-Requisitos Não Funcionais Identificados:
-
-Usabilidade: O sistema deve ser fácil de usar, com elementos de UI claramente visíveis e interativos, como botões e campos de formulário. Todos os botões e campos de entrada devem ser acessíveis e funcionais.
-
-Desempenho: O sistema deve ser responsivo, realizando as ações (como login, cadastro e abertura de contas) rapidamente sem travamentos ou lentidão.
-
-Segurança: O sistema deve validar corretamente os campos antes de permitir o envio de dados para o servidor, evitando falhas no envio de informações.
-
-Atividades Levantadas:
-
-Login de Cliente:
-
-Atividade 1: Implementar a verificação de que o botão "Customer Login" está visível e funcional.
-
-Atividade 2: Implementar o preenchimento da seleção de usuário e a validação do login com sucesso.
-
-Atividade 3: Implementar verificação para garantir que, após o login, o usuário permanece na página atual.
-
-Cadastro de Cliente:
-
-Atividade 1: Garantir que todos os campos de formulário para o cadastro do cliente estejam funcionando corretamente (nome, e-mail, telefone).
-
-Atividade 2: Validar a entrada de dados para garantir que não existam campos vazios ou com dados inválidos.
-
-Abrir Conta:
-
-Atividade 1: Implementar a funcionalidade de abertura de conta, onde o gerente seleciona a moeda desejada.
-
-Atividade 2: Verificar se a opção de moeda "Dollar" está visível e selecionável.
-
-Verificação de Redirecionamento:
-
-Atividade 1: Garantir que, após o login ou a execução de ações como "Home" e "Add Customer", o redirecionamento para as URLs corretas ocorra de forma adequada.
-
-Atividade 2: Implementar um comportamento que garante que o usuário não saia da página atual sem realizar a ação de navegação desejada.
-
-b. Escrever uma história de usuário para uma funcionalidade de melhoria nas rotinas do sistema.
-História de Usuário 1: Melhorias no Login de Cliente:
-
-Como cliente do sistema bancário,
-
-Quero poder fazer login rapidamente, utilizando a seleção de usuário e a autenticação por meio de um campo de senha ou biometria,
-
-Para que eu possa acessar minha conta de forma rápida e segura, sem precisar lembrar de uma senha toda vez.
-
-Critérios de Aceitação:
-
-O sistema deve permitir que o cliente escolha um usuário da lista suspensa (usando #userSelect).
-
-O sistema deve permitir o login ao clicar no botão "Login", que deve ser visível (cy.get('form.ng-valid > .btn')).
-
-O cliente deve permanecer na página desejada após o login (como /account ou /listTx).
-
-O sistema deve realizar o login de forma eficiente e com validação de dados correta.
-
-História de Usuário 2: Melhorias no Cadastro de Cliente:
-
-Como gerente do sistema bancário,
-
-Quero adicionar um novo cliente utilizando um formulário simples e rápido, onde poderei preencher o nome, e-mail e telefone,
-
-Para que eu possa cadastrar novos clientes de forma eficiente e sem erros.
-
-Critérios de Aceitação:
-
-O formulário de "Add Customer" deve permitir preencher campos como nome, e-mail e telefone (cy.get(':nth-child(1) > .form-control')).
-
-O gerente deve ser capaz de clicar no botão "Add Customer" e o cliente deve ser adicionado corretamente (cy.get('.ng-submitted > .btn')).
-
-O sistema deve validar corretamente os campos antes de permitir o envio do formulário.
-
-Após o cadastro, o sistema deve exibir uma mensagem de sucesso (como "Customer added successfully").
-
-História de Usuário 3: Melhorias na Abertura de Conta:
-
-Como gerente do sistema bancário,
-
-Quero abrir uma conta para um cliente selecionado e definir a moeda como "Dollar",
-
-Para que eu possa criar contas de forma rápida e com as configurações corretas de moeda.
-
-Critérios de Aceitação:
-
-O gerente deve ser capaz de selecionar o cliente usando o campo #userSelect e definir a moeda utilizando o campo #currency (onde deve selecionar "Dollar").
-
-O gerente deve ser capaz de clicar no botão "Open Account" para abrir a conta (cy.get('[ng-class="btnClass2"]')).
-
-Após abrir a conta, a conta deve ser registrada corretamente para o cliente escolhido.
-
-O sistema deve garantir que a operação de abertura de conta seja realizada sem falhas e que o cliente permaneça na página após a operação.
-
-Conclusão:
-Levantamento de Requisitos: Com base no seu código, foram identificados os requisitos funcionais e não funcionais necessários para a correta operação do sistema. O levantamento inclui atividades como validar botões e campos de formulário, garantir que os redirecionamentos ocorram corretamente e realizar o cadastro e login de forma eficiente.
-
-Histórias de Usuário: Cada melhoria ou funcionalidade foi transformada em histórias de usuário, com critérios de aceitação claros para garantir que o sistema atenda às necessidades dos stakeholders.
+### **Conclusão:**
+O levantamento de requisitos detalha os pontos essenciais para o correto funcionamento do sistema, identificando tanto os requisitos técnicos como as necessidades de melhoria nas funcionalidades. As histórias de usuário ajudam a garantir que as melhorias atendam às expectativas dos usuários e gestores.
