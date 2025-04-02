@@ -4,7 +4,7 @@ Utilizando a ferramenta cypress para automatizar
 Levantamento de Requisitos
 Objetivo: Levantar todos os requisitos necessários para garantir que o sistema funcione corretamente, com base nos resultados dos testes realizados no código fornecido.
 
-a. Elaborar a construção de atividades listando todos os requisitos necessários, considerando o resultado obtido dos testes.
+1.Elaborar a construção de atividades listando todos os requisitos necessários, considerando o resultado obtido dos testes.
 Com base no seu código, vemos que a aplicação precisa realizar algumas interações com a interface do usuário, como clicar em botões, preencher campos de formulário, selecionar opções de listas suspensas, entre outras atividades. Com isso, identificamos requisitos funcionais e não funcionais que devem ser atendidos.
 
 Requisitos Funcionais Identificados:
