@@ -1,7 +1,7 @@
 # XYZ-Bank
 Utilizando a ferramenta cypress para automatizar
 
-### **Levantamento de Requisitos
+### **Levantamento de Requisitos**
 
 O objetivo do levantamento de requisitos é identificar as necessidades essenciais para o funcionamento correto do sistema, com base nos testes realizados no código. As principais atividades envolvem a interação com a interface do usuário, como login, cadastro de clientes, e abertura de contas. Foram identificados requisitos funcionais e não funcionais que o sistema deve atender.
 
